@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TempBox | Instant Email</title>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3299034064102978"
+     crossorigin="anonymous"></script>
+
+    <style>
+        /* Full-screen setup */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: #ffffff;
+            font-family: sans-serif;
+        }
+
+        .main-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* The iframe containing your app */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* THE BLOCKER: 
+           Positioned specifically to cover the Lovable badge 
+           found in the bottom right of the viewport.
+        */
+        .hide-watermark {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 180px;  /* Covers the width of the 'Edit with Lovable' badge */
+            height: 60px;  /* Covers the height of the badge */
+            background-color: #ffffff; /* Matches the site footer background */
+            z-index: 99999;
+            pointer-events: auto; /* Blocks clicks to the badge underneath */
+        }
+
+        /* Optional: Adding a small 'Loading' text if the iframe takes time */
+        .loading-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div class="loading-text">Loading TempBox...</div>
+        
+        <iframe src="https://speedy-mail-drop.lovable.app/" allowfullscreen></iframe>
+        
+        <div class="hide-watermark"></div>
+    </div>
+
+</body>
+</html>
